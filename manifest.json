@@ -1,22 +1,32 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "GW2 DPS Report KPs",
     "description": "This extension will show the killproofs of the current DPS Report",
     "version": "0.1",
     "icons": {
-        "16": "icon.png",
-        "48": "icon.png",
-        "128": "icon.png"
+        "16": "/images/icon16.png",
+        "32": "/images/icon32.png",
+        "48": "/images/icon48.png",
+        "128": "/images/icon128.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "/images/icon16.png",
+            "32": "/images/icon32.png",
+            "48": "/images/icon48.png",
+            "128": "/images/icon128.png"
+        }
     },
     "permissions": [
         "activeTab",
+        "storage"
+    ],
+    "host_permissions": [        
         "https://killproof.me/*"
     ],
     "background": {
-        "scripts": [
-            "bg_page.js"
-        ],
-        "persistent": false
+        "service_worker": "js/bg_page.js"
     },
     "content_scripts": [
         {
@@ -27,7 +37,8 @@
                 "styles.css"
             ],
             "js": [
-                "popup.js"
+                "js/data.js",
+                "js/injector.js"
             ],
             "run_at": "document_end"
         }

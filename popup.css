@@ -1,0 +1,64 @@
+body {
+    width: 500px;
+    padding: 10px;
+}
+
+img.icon {
+    width: 26px;
+    height: 26px;
+    margin-right: 5px;
+}
+
+h1 {
+    margin: 0 !important;
+}
+
+.kp-row {
+    display: flex;
+    height: 18px;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+}
+
+.kp-row span {
+    flex: 1 1 auto;
+    line-height: 18px;
+    text-align: right;
+}
+
+.kp-row img{
+    flex: 0 0 18px;
+    margin-right: 5px;
+}
+
+.accordion {
+    padding: unset !important;
+}
+
+label {
+    display: grid!important;
+    grid-template-columns: 30px auto 30px;
+    margin-bottom: 5px;
+}
+
+input {
+    justify-self: center;
+}
+
+label input {
+    font-size: 20px;    
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+}
+
+.fill-space {
+    flex: 1 1 auto;
+}
+
+button {
+    grid-column: span 2;
+}
