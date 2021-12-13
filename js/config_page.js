@@ -26,8 +26,7 @@ function initiate(config) {
 }
 
 // Saves options to chrome.storage
-function save_options() {
-    console.log("save")
+function save_options() {    
     var elements = document.getElementById("form").elements;
     var obj ={};
     for(var i = 0 ; i < elements.length ; i++){
@@ -65,7 +64,7 @@ function createRow(x, config) {
     input.id = x.id;
     input.classList.add('form-check-input');
     input.type = "checkbox";
-    if (config[x.id]) {
+    if (config && config[x.id]) {
         input.checked = config[x.id];
     }
     label.textContent = x.name;

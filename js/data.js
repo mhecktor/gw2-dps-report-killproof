@@ -2,7 +2,7 @@ const data = [
     {
         "id": 88485,
         "name": "Legendary Divination",
-        "iconUrl": "https://killproof.me/static/images/icon-li.png",
+        "iconUrl": "https://killproof.me/static/images/icon-ld.png",
         "key": [
             "killproofs",
             "linked_totals.killproofs"
@@ -11,7 +11,7 @@ const data = [
     {
         "id": 77302,
         "name": "Legendary Insight",
-        "iconUrl": "https://killproof.me/static/images/icon-ld.png",
+        "iconUrl": "https://killproof.me/static/images/icon-li.png",
         "key": [
             "killproofs",
             "linked_totals.killproofs"

@@ -35,11 +35,16 @@ function init() {
             (data) => {
                 if (config) {
                     let seeable = [];
-                    Object.entries(config).forEach(([key, value]) => {
-                        if (value) {
-                            seeable.push(justAllIds.find((x) => x.id == key));
+                    justAllIds.forEach((x) => {
+                        if(config[x.id]) {
+                            seeable.push(x);
                         }
-                    });
+                    })
+                    // Object.entries(config).forEach(([key, value]) => {
+                    //     if (value) {
+                    //         seeable.push(justAllIds.find((x) => x.id == key));
+                    //     }
+                    // });
                     if (data.error) {
                         seeable.forEach((x) => {
                             x.amount = '';
