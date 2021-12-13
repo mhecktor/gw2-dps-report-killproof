@@ -64,7 +64,7 @@ function createRow(x, config) {
     input.id = x.id;
     input.classList.add('form-check-input');
     input.type = "checkbox";
-    if (config && config[x.id]) {
+    if (config && config[x.id] && x && x.id) {
         input.checked = config[x.id];
     }
     label.textContent = x.name;
